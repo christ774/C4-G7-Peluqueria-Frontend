@@ -10,6 +10,7 @@ import {ClientDetail} from "./pages/ClientDetail";
 import {PagesEmployee} from "./pages/PagesEmployee";
 import {EmployeeFrom} from "./pages/EmployeeFrom";
 import {EmployeeDetail} from "./pages/EmployeeDetail";
+import {ProductDetail} from "./pages/ProductDetail";
 
 
 
@@ -30,6 +31,7 @@ function App() {
                   <Route path="/diary/:id" element={<DiaryDetail/>}/>
                   <Route path="/employee/form" element={<EmployeeFrom/>}/>
                   <Route path="/employee/:id" element={<EmployeeDetail/>}/>
+                  <Route path="/product/:id" element={<ProductDetail/>}/>
 
               </Routes>
 
