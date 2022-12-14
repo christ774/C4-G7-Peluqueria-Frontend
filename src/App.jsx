@@ -12,9 +12,7 @@ import {EmployeeFrom} from "./pages/EmployeeFrom";
 import {EmployeeDetail} from "./pages/EmployeeDetail";
 import {ProductDetail} from "./pages/ProductDetail";
 import {ProductForm} from "./pages/ProductForm";
-
-
-
+import {PagesProduct} from "./pages/PagesProduct";
 
 
 function App() {
@@ -35,6 +33,7 @@ function App() {
                   <Route path="/product/:id" element={<ProductDetail/>}/>
                   <Route path="/product/form" element={<ProductForm/>}/>
                   <Route path="/product" element={<PagesProduct/>}/>
+                  
 
 
               </Routes>

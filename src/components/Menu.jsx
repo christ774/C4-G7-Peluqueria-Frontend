@@ -15,7 +15,7 @@ function Menu() {
                         <NavLink to="/cliente" className="nav-link">Cliente</NavLink>
                         <NavLink to="/empleado" className="nav-link">Empleado</NavLink>
                         <NavLink to="/citas" className="nav-link">Citas</NavLink>
-                        <NavLink to="/servicio" className="nav-link">Servicio</NavLink>
+                        <NavLink to="/product" className="nav-link">Servicio</NavLink>
 
 
                     </Nav>

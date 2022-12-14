@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { saveProduct } from "../server/ServerProduct.jsx";
 import { useNavigate } from "react-router-dom";
+import { saveProduct } from "../server/ServerProduct.jsx";
 
-
-
-function ProductForm(){
+function ProductForm() {
 
     const navigate = useNavigate();
     function returntoProduct(){
@@ -14,71 +12,73 @@ function ProductForm(){
 
     const [product, setProduct] = useState({
         
-        service:"",
-        cost:"",
-        durationService:"",
-        idClient:""
+        service: "",
+        cost: "",
+        durationService: "",
+        idClient: ""
     });
 
     function handleChange({target}){
         setProduct({
             ...product,
-            [target.name]:target.value
+            [target.name]: target.value
         });
     };
 
     async function handleSubmit(e){
-        e.preventdefault();
+        e.preventDefault();
         const response = await saveProduct(product);
         alert(response);
-        returntoProduct;
+        returntoProduct();
     }
 
     return (
         <Container>
-            <h2>Registrar Producto</h2>
+            <h1>Registrar Servicio</h1>
             <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col xs="auto" className="my-1">
-                        <Form.label1>Servicio</Form.label1>
+                        <Form.Label>Servicio</Form.Label>
                         <Form.Control
                         required
-                        type = "text"
+                        type="text"
                         name="service"
                         onChange={handleChange}
                         />
                     </Col>
                     <Col xs="auto" className="my-1">
-                    <Form.label1>Costo</Form.label1>
+                    <Form.Label>Costo</Form.Label>
                         <Form.Control
                         required
-                        type = "number"
+                        type="number"
                         name="cost"
                         onChange={handleChange}
                         />
                     </Col>
                     <Col xs="auto" className="my-1">
-                    <Form.label1>Duración servicio</Form.label1>
+                    <Form.Label>Duración servicio</Form.Label>
                         <Form.Control
                         required
-                        type = "number"
+                        type="number"
                         name="durationService"
                         onChange={handleChange}
                         />
                     </Col>
-                    <Row>
-                    </Row>
+                </Row>
+                <Row>
                     <Col xs="auto" className="my-1">
-                    <Form.label1>ID Cliente</Form.label1>
+                    <Form.Label>ID Cliente</Form.Label>
                         <Form.Control
                         required
-                        type = "text"
+                        type="text"
                         name="idClient"
                         onChange={handleChange}
                         />
                     </Col>
                 </Row>
-                <Row></Row>
+                <Row>
+
+                </Row>
                 <Row>
                     <Col md={{span:3, offset:3}}> <Button variant="success" type="submit">Guardar</Button></Col>
                 </Row>
@@ -88,4 +88,5 @@ function ProductForm(){
             </Row>
         </Container>
     )
-}export {ProductForm}
+}
+export {ProductForm}
