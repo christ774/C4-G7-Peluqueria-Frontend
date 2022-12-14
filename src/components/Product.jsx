@@ -37,7 +37,7 @@ function Product() {
             <Row className="my-3">
                 <Col><h2>Servicios</h2></Col>
                 <Col xs={6}></Col>
-                <Col><Link to="/product/form"><Button variant="success">Registrar</Button></Link></Col>
+                <Col><Link to="/servicios/form"><Button variant="success">Registrar</Button></Link></Col>
             </Row>
             <Table striped bordered hover >
                 <thead>
@@ -58,10 +58,10 @@ function Product() {
                                 <td>{++contadorProduct}</td>
                                 <td>{product.service}</td>
                                 <td>{product.cost}</td>
-                                <td>{product.duration}</td>
+                                <td>{product.durationService}</td>
                                 <td>{product.idClient}</td>
 
-                                <td><Link to={`/product/${product.id}`}>Ver Detalle</Link></td>
+                                <td><Link to={`/servicios/${product.id}`}>Ver Detalle</Link></td>
                                 <td ><Button variant="danger" onClick={() => eliminarProduct(product.id)}>Eliminar</Button></td>
                             </tr>
                         )

@@ -13,7 +13,7 @@ function ProductDetail() {
 
     const navigate = useNavigate();
     function retornarPage() {
-        navigate("/product")
+        navigate("/servicios")
     }
 
     useEffect(() => {

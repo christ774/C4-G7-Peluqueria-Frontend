@@ -30,9 +30,9 @@ function App() {
                   <Route path="/diary/:id" element={<DiaryDetail/>}/>
                   <Route path="/employee/form" element={<EmployeeFrom/>}/>
                   <Route path="/employee/:id" element={<EmployeeDetail/>}/>
-                  <Route path="/product/:id" element={<ProductDetail/>}/>
-                  <Route path="/product/form" element={<ProductForm/>}/>
-                  <Route path="/product" element={<PagesProduct/>}/>
+                  <Route path="/servicios/:id" element={<ProductDetail/>}/>
+                  <Route path="/servicios/form" element={<ProductForm/>}/>
+                  <Route path="/servicios" element={<PagesProduct/>}/>
                   
 
 

@@ -1,18 +1,18 @@
 const API_URL = "http://localhost:8080/";
 export async function listaProducts() {
-    const res = await fetch(API_URL+"product/");
+    const res = await fetch(API_URL+"servicios/");
     return await res.json();
 }
 
 export async function findProductById(id) {
-    const res = await fetch(API_URL+"product/" + id);
+    const res = await fetch(API_URL+"servicios/" + id);
     const data = await res.json();
     return data;
 }
 
 export async function deleteProductById(id) {
     const options = { method: "DELETE" }
-    const res = await fetch(API_URL+"product/" + id, options);
+    const res = await fetch(API_URL+"servicios/" + id, options);
     const texto = await res.text();
     return texto;
 }
@@ -23,6 +23,6 @@ export async function saveProduct(product) {
         headers:{"Content-type":"application/json"},
         body:JSON.stringify(product)
     }
-    const res = await fetch(API_URL+"product/", options);
+    const res = await fetch(API_URL+"servicios/", options);
     return await res.text();
 }

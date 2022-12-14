@@ -7,7 +7,7 @@ function ProductForm() {
 
     const navigate = useNavigate();
     function returntoProduct(){
-        navigate("/product")
+        navigate("/servicios")
     }
 
     const [product, setProduct] = useState({
