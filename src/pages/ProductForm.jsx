@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Col, Row } from "react-bootstrap";
-import { Button } from "react-bootstrap/lib/inputgroup";
-import { Form } from "react-bootstrap/lib/navbar";
-import { Container } from "react-bootstrap/lib/tab";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { saveProduct } from "../server/ServerProduct.jsx";
 import { useNavigate } from "react-router-dom";
 
-function Productform(){
+
+
+function ProductForm(){
 
     const navigate = useNavigate();
     function returntoProduct(){
@@ -88,4 +88,4 @@ function Productform(){
             </Row>
         </Container>
     )
-}export {Productform}
+}export {ProductForm}

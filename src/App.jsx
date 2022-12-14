@@ -11,6 +11,7 @@ import {PagesEmployee} from "./pages/PagesEmployee";
 import {EmployeeFrom} from "./pages/EmployeeFrom";
 import {EmployeeDetail} from "./pages/EmployeeDetail";
 import {ProductDetail} from "./pages/ProductDetail";
+import {ProductForm} from "./pages/ProductForm";
 
 
 
@@ -32,13 +33,13 @@ function App() {
                   <Route path="/employee/form" element={<EmployeeFrom/>}/>
                   <Route path="/employee/:id" element={<EmployeeDetail/>}/>
                   <Route path="/product/:id" element={<ProductDetail/>}/>
+                  <Route path="/product/form" element={<ProductForm/>}/>
+                  <Route path="/product" element={<PagesProduct/>}/>
+
 
               </Routes>
 
           </HashRouter>
-
-
-
 
     </div>
   )
