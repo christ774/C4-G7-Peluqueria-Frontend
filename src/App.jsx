@@ -30,6 +30,9 @@ function App() {
                   <Route path="/diary/:id" element={<DiaryDetail/>}/>
                   <Route path="/employee/form" element={<EmployeeFrom/>}/>
                   <Route path="/employee/:id" element={<EmployeeDetail/>}/>
+                  <Route path="/client/form" element={<ClientFrom/>}/>
+                  <Route path="/client/:id" element={<ClientDetail/>}/>
+                  <Route path="/cliente" element={<PagesClient/>}/>
 
               </Routes>
 
