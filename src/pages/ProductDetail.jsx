@@ -88,16 +88,7 @@ function ProductDetail() {
                                       onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group as={Col} controlId="idCliente">
-                        <Form.Label>Id Cliente</Form.Label>
-                        <Form.Control defaultValue={product.idCliente} disabled={disabled}
-                                      name="idCliente"
-                                      type="text"
-                                      required
-                                      onChange={handleChange}
-                        />
-                    </Form.Group>
-                    
+                                        
                 </Row>
                 <Row>
                     <Col md={{ span: 3, offset: 3 }}><Button variant="success" type="submit">Guardar</Button></Col>

@@ -65,17 +65,7 @@ function ProductForm() {
                         />
                     </Col>
                 </Row>
-                <Row>
-                    <Col xs="auto" className="my-1">
-                    <Form.Label>ID Cliente</Form.Label>
-                        <Form.Control
-                        required
-                        type="text"
-                        name="idClient"
-                        onChange={handleChange}
-                        />
-                    </Col>
-                </Row>
+                
                 <Row>
 
                 </Row>
