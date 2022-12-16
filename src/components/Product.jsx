@@ -46,7 +46,6 @@ function Product() {
                     <th>Servicios</th>
                     <th>Costo</th>
                     <th>Duración</th>
-                    <th>Id Cliente</th>
                     <th>Ver Detalle</th>
                     <th>Eliminar</th>
                 </tr>
@@ -59,8 +58,7 @@ function Product() {
                                 <td>{product.service}</td>
                                 <td>{product.cost}</td>
                                 <td>{product.durationService}</td>
-                                <td>{product.idClient}</td>
-
+                                
                                 <td><Link to={`/servicios/${product.id}`}>Ver Detalle</Link></td>
                                 <td ><Button variant="danger" onClick={() => eliminarProduct(product.id)}>Eliminar</Button></td>
                             </tr>

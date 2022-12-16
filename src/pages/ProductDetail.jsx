@@ -62,7 +62,7 @@ function ProductDetail() {
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="servicio">
                         <Form.Label>Servicio</Form.Label>
-                        <Form.Control defaultValue={product.servicio} disabled={disabled}
+                        <Form.Control defaultValue={product.service} disabled={disabled}
                                       name="servicio"
                                       type="text"
                                       required
@@ -72,7 +72,7 @@ function ProductDetail() {
 
                     <Form.Group as={Col} controlId="costo">
                         <Form.Label>Costo</Form.Label>
-                        <Form.Control defaultValue={product.costo} disabled={disabled}
+                        <Form.Control defaultValue={product.cost} disabled={disabled}
                                       name="costo"
                                       type="number"
                                       required
@@ -81,7 +81,7 @@ function ProductDetail() {
                     </Form.Group>
                     <Form.Group as={Col} controlId="duracion">
                         <Form.Label>Duración</Form.Label>
-                        <Form.Control defaultValue={product.duracion} disabled={disabled}
+                        <Form.Control defaultValue={product.durationService} disabled={disabled}
                                       name="duracion"
                                       type="number"
                                       required

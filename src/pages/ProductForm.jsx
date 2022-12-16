@@ -14,8 +14,7 @@ function ProductForm() {
         
         service: "",
         cost: "",
-        durationService: "",
-        idClient: ""
+        durationService: ""
     });
 
     function handleChange({target}){
