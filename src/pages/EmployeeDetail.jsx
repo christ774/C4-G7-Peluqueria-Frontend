@@ -61,7 +61,7 @@ function EmployeeDetail() {
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="nombreyapellido">
                         <Form.Label>Nombre y Apellido</Form.Label>
-                        <Form.Control defaultValue={employee.nombreyapellido} disabled={disabled}
+                        <Form.Control defaultValue={employee.name_surname} disabled={disabled}
                                       name="nombreyapellido"
                                       type="text"
                                       required
@@ -71,7 +71,7 @@ function EmployeeDetail() {
 
                     <Form.Group as={Col} controlId="cedula">
                         <Form.Label>Cedula</Form.Label>
-                        <Form.Control defaultValue={employee.cedula} disabled={disabled}
+                        <Form.Control defaultValue={employee.identification} disabled={disabled}
                                       name="cedula"
                                       type="number"
                                       required
@@ -80,7 +80,7 @@ function EmployeeDetail() {
                     </Form.Group>
                     <Form.Group as={Col} controlId="especialidad">
                         <Form.Label>Especialidad</Form.Label>
-                        <Form.Control defaultValue={employee.especialidad} disabled={disabled}
+                        <Form.Control defaultValue={employee.specialty} disabled={disabled}
                                       name="especialidad"
                                       type="text"
                                       required
@@ -89,7 +89,7 @@ function EmployeeDetail() {
                     </Form.Group>
                     <Form.Group as={Col} controlId="correo">
                         <Form.Label>Correo</Form.Label>
-                        <Form.Control defaultValue={employee.correo} disabled={disabled}
+                        <Form.Control defaultValue={employee.email} disabled={disabled}
                                       name="correo"
                                       type="text"
                                       required
@@ -98,7 +98,7 @@ function EmployeeDetail() {
                     </Form.Group>
                     <Form.Group as={Col} controlId="telefono">
                         <Form.Label>Telefono</Form.Label>
-                        <Form.Control defaultValue={employee.telefono} disabled={disabled}
+                        <Form.Control defaultValue={employee.phoneNumber} disabled={disabled}
                                       name="telefono"
                                       type="number"
                                       required
@@ -107,7 +107,7 @@ function EmployeeDetail() {
                     </Form.Group>
                     <Form.Group as={Col} controlId="direccion">
                         <Form.Label>Dirrecion</Form.Label>
-                        <Form.Control defaultValue={employee.direccion} disabled={disabled}
+                        <Form.Control defaultValue={employee.address} disabled={disabled}
                                       name="direccion"
                                       type="text"
                                       required
