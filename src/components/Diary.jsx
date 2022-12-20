@@ -1,55 +1,77 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, FormControl, FormLabel, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { listaDiarys } from "../server/ServerDiary.jsx";
+import { deleteDiaryPorId, listaDiarys } from "../server/ServerDiary";
 
 function Diary() {
 
     const [diarys, setDiarys] = useState([]);
 
-    async function listarDiarys() {
+    async function cargarDiarys() {
         try {
             const res = await listaDiarys();
-            setDiary(res);
+            setDiarys(res);
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
-
     };
     useEffect(() => {
-        listarDiarys()
-    }, [setDiarys]);
-    const fecha = new Date();
+        cargarDiarys();
+    }, []);
 
+    async function deleteDiaryById(id) {
+        let result = window.confirm("Seguro de Eliminar");
+        if (result) {
+            const response = await deleteDiaryPorId(id);
+            alert(response);
+            setDiarys(diarys.filter(diary => diary.id !== id));
+        }
+
+    }
+
+    let contador = 0;
 
     return (
+        <Container>
+            <Row className="my-3">
+                <Col><h2>Lista de Agendas</h2></Col>
+                <Col xs={6}></Col>
+                <Col>
+                    <Link to="/agenda/form">
+                        <Button variant="success">Registrar</Button>
+                    </Link>
 
-        <Container className="my-3">
-            <Row>
-                {
-                    diarys.filter(diary=>diary.fecha>fecha.toISOString()).map((diary) => (
-                        <Col  key={diary.id}>
-                            <Card
-                                text={diary.fecha}
-                                style={{ width: '18rem' }}
-                                className="mb-2"
-                            >
-                                <Card.Header>Fecha diary: {diary.fecha.slice(0,10)}</Card.Header>
-                                <Card.Body>
-                                    <Card.Title>{} </Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.
-                                    </Card.Text>
-                                    <Link to={`/diary/${diary.id}`}><Button variant="primary">Ver Detalle</Button></Link>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
+                </Col>
             </Row>
 
+
+            <Table striped bordered hover>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Id Agenda</th>
+                    <th>Id Empleado</th>
+                    <th>Fecha</th>
+                    <th>Ver Detalle</th>
+                    <th>Eliminar</th>
+                </tr>
+                </thead>
+                <tbody>
+                {
+                    diarys.map((diary) => (
+                        <tr key={diary.id}>
+                            <td>{++contador}</td>
+                            <td>{diary.id}</td>
+                            <td>{diary.id_employee}</td>
+                            <td>{diary.date_diary}</td>
+                            <td><Link to={`/agenda/${diary.id}`}>Ver Detalle</Link></td>
+                            <td><Button variant="danger" onClick={()=>deleteDiaryById(diary.id)}>Eliminar</Button></td>
+                        </tr>
+                    ))
+                }
+                </tbody>
+
+            </Table>
         </Container>
     )
-
-}
-export { Diary }
+} export { Diary }

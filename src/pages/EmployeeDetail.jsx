@@ -59,56 +59,56 @@ function EmployeeDetail() {
             <Form className="mt-5" onSubmit={handleSubmit}>
 
                 <Row className="mb-3">
-                    <Form.Group as={Col} controlId="nombreyapellido">
+                    <Form.Group as={Col} controlId="name_surname">
                         <Form.Label>Nombre y Apellido</Form.Label>
-                        <Form.Control defaultValue={employee.nombreyapellido} disabled={disabled}
-                                      name="nombreyapellido"
+                        <Form.Control defaultValue={employee.name_surname} disabled={disabled}
+                                      name="name_surname"
                                       type="text"
                                       required
                                       onChange={handleChange}
                         />
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="cedula">
+                    <Form.Group as={Col} controlId="identification">
                         <Form.Label>Cedula</Form.Label>
-                        <Form.Control defaultValue={employee.cedula} disabled={disabled}
-                                      name="cedula"
+                        <Form.Control defaultValue={employee.identification} disabled={disabled}
+                                      name="identification"
                                       type="number"
                                       required
                                       onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group as={Col} controlId="especialidad">
+                    <Form.Group as={Col} controlId="specialty">
                         <Form.Label>Especialidad</Form.Label>
-                        <Form.Control defaultValue={employee.especialidad} disabled={disabled}
-                                      name="especialidad"
+                        <Form.Control defaultValue={employee.specialty} disabled={disabled}
+                                      name="specialty"
                                       type="text"
                                       required
                                       onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group as={Col} controlId="correo">
+                    <Form.Group as={Col} controlId="email">
                         <Form.Label>Correo</Form.Label>
-                        <Form.Control defaultValue={employee.correo} disabled={disabled}
-                                      name="correo"
+                        <Form.Control defaultValue={employee.email} disabled={disabled}
+                                      name="email"
                                       type="text"
                                       required
                                       onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group as={Col} controlId="telefono">
+                    <Form.Group as={Col} controlId="phoneNumber">
                         <Form.Label>Telefono</Form.Label>
-                        <Form.Control defaultValue={employee.telefono} disabled={disabled}
-                                      name="telefono"
+                        <Form.Control defaultValue={employee.phoneNumber} disabled={disabled}
+                                      name="phoneNumber"
                                       type="number"
                                       required
                                       onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group as={Col} controlId="direccion">
+                    <Form.Group as={Col} controlId="address">
                         <Form.Label>Dirrecion</Form.Label>
-                        <Form.Control defaultValue={employee.direccion} disabled={disabled}
-                                      name="direccion"
+                        <Form.Control defaultValue={employee.address} disabled={disabled}
+                                      name="address"
                                       type="text"
                                       required
                                       onChange={handleChange}

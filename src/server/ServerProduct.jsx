@@ -1,28 +1,28 @@
 const API_URL = "http://localhost:8080/";
-export async function listaEmployees() {
-    const res = await fetch(API_URL+"empleado/");
+export async function listaProducts() {
+    const res = await fetch(API_URL+"servicios/");
     return await res.json();
 }
 
 export async function findProductById(id) {
-    const res = await fetch(API_URL+"empleado/" + id);
+    const res = await fetch(API_URL+"servicios/" + id);
     const data = await res.json();
     return data;
 }
 
-export async function deleteEmployeeById(id) {
+export async function deleteProductById(id) {
     const options = { method: "DELETE" }
-    const res = await fetch(API_URL+"empleado/" + id, options);
+    const res = await fetch(API_URL+"servicios/" + id, options);
     const texto = await res.text();
     return texto;
 }
 
-export async function saveEmployee(employee) {
+export async function saveProduct(product) {
     const options = {
         method: "POST",
         headers:{"Content-type":"application/json"},
-        body:JSON.stringify(employee)
+        body:JSON.stringify(product)
     }
-    const res = await fetch(API_URL+"empleado/", options);
+    const res = await fetch(API_URL+"servicios/", options);
     return await res.text();
 }

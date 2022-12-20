@@ -1,5 +1,6 @@
+
 import React from "react";
-import {Client} from "../components/Client.jsx";
+import {Client} from "../components/Client";
 
 function PagesClient() {
     return(
