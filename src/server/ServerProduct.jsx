@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/";
+const API_URL = "http://129.213.214.60:8080/";
 export async function listaProducts() {
     const res = await fetch(API_URL+"servicios/");
     return await res.json();
